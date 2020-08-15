@@ -1,0 +1,68 @@
+Frank -
+List of books and their characteristics - Training Data
+Friend - ML Model - Decision Tree
+List of Questions - genre, name, author, yearpub, pages, publisher,fic/non-fic
+
+List of actual books
+
+Asking Questions in this order
+    1. Yes / No type of Questions
+    2. Detailed Questions
+
+Classifying whether Frank would like book or not
+_________
+
+Problems: 
+Questions from start till end - fitting the whole data frank created
+
+OVERFITTING
+
+Solution: Called in other friends as well
+
+All friends along with previous one started asking him questions to 
+help him decide wihch book to read
+
+ENSEMBLE of Algorithms
+
+Take their opinions, Merge - Voting - Majority vote wins
+
+Problems: 
+    1. Similar circle of friends, asking questions in almost similar way
+    2. Recommendations were not unique
+
+Frank decided to Cut up the list - training data
+Put it in a bag
+
+Random Sampling with Replacement - Friends will pick the list, ask questions, and then put the list back in bag
+
+Random Sampling with Replacement - Bootstrapping
+
+    1. unique reco since there will be more emphasis on some books and less on others by virtue of sampling
+
+Aggregating - Bagging
+
+Bootstrap Sampling + Aggregation of results = Bagging Algorithms
+
+Different friends / algos = Bootstrap Aggregated forest
+
+Problems:
+    1. Wrong inference due to some bias in results / patterns
+    2. Order of questions is still the same
+
+Initiated Randomness in the questions
+    - force your friends to ask questions randomly
+    - at each node, decision tree will randomly select the 
+        attribute on which it will split further
+
+RANDOM forest - 
+    * Random Sampling using Bootstrapping
+    * Multiple trees
+    * Random splitting
+    * Aggregation
+
+
+
+
+How do we decide whether a node is a decision node or a terminal node?
+    - Gini Index - Purity of data
+        * For a terminal node, which is also a pure node - Gini Index will be 0 and vice versa for Decision node.
